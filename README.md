@@ -1,1 +1,1 @@
-# ttyd-vm
+```chmod 644 /etc/apt/trusted.gpg.d/* && apt-get update -o Acquire::AllowInsecureRepositories=true -o Acquire::AllowDowngradeToInsecureRepositories=true --allow-unauthenticated && apt-get install -y --allow-unauthenticated curl wget ca-certificates```
