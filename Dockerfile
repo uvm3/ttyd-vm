@@ -13,7 +13,7 @@ RUN wget -O ttyd https://github.com/tsl0922/ttyd/releases/download/1.7.4/ttyd.x8
     && mv ttyd /usr/local/bin/
 
 RUN echo 'root:root' | chpasswd
-RUN echo "ubuntu ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
+RUN echo "root ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 
 USER root
 
