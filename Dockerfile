@@ -20,4 +20,4 @@ RUN echo 'root:root' | chpasswd \
 USER root
 EXPOSE 7860
 
-CMD ["ttyd", "-p", "7860", "-W", "screen", "-R", "session", "bash", "-l"]
+CMD ["ttyd", "-p", "7860", "-W", "-T", "screen", "-R", "session", "bash", "-l"]
