@@ -20,5 +20,4 @@ RUN echo 'root:root' | chpasswd && usermod -s /bin/bash root
 
 EXPOSE 7860
 
-# FIX: Chỉ tạo 1 phiên duy nhất và luôn kết nối vào nó
-CMD ["ttyd", "-p", "7860", "-w", "-t", "bash", "-c", "screen -ls | grep -q session || screen -dmS session bash -l; screen -r session"]
+CMD ["ttyd", "-p", "7860", "-w", "bash", "-c", "screen -ls | grep -q session || screen -dmS session bash -l; screen -r session"]
