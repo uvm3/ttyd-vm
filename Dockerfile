@@ -20,4 +20,4 @@ RUN echo 'root:root' | chpasswd && usermod -s /bin/bash root
 
 EXPOSE 7860
 
-CMD ["ttyd", "-p", "7860", "-W", "bash", "-c", "screen -ls | grep -q session || screen -dmS session bash -l; screen -r session"]
+CMD ["ttyd", "-p", "7860", "-W", "bash", "-c", "screen -wipe; screen -dmS session bash -l 2>/dev/null || true; exec screen -r session || exec screen -dmS session bash -l && exec screen -r session"]
